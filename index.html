@@ -128,6 +128,38 @@
 
     /* Smooth scroll */
     html{scroll-behavior:smooth}
+    /* HERO VIDEO BACKGROUND */
+.hero-bg {
+  position: relative;
+  min-height: 90vh;
+  overflow: hidden;
+}
+
+.hero-bg video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.85);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
   </style>
 </head>
 
@@ -149,12 +181,18 @@
     </div>
   </nav>
 
-  <header class="wrap hero">
-    <h1>Drone visuals and 3D mapping.<br/>Clean. Precise.</h1>
+  <header class="hero-bg">
+  <video autoplay muted loop playsinline>
+    <source src="assets/hero.mp4" type="video/mp4">
+  </video>
+
+  <div class="wrap hero hero-content">
+    <h1>Drone visuals and 3D<br/>mapping.</h1>
+
     <p>
-      Aerial photo & video, photogrammetry and 3D outputs for real estate, hospitality,
-      architecture and outdoor locations — from mountain lodges to seaside resorts.
-      Operating across Northern Italy and Switzerland.
+      Aerial photo & video, photogrammetry and 3D outputs for real estate,
+      hospitality, architecture and outdoor locations — from mountain lodges
+      to seaside resorts. Operating across Northern Italy and Switzerland.
     </p>
 
     <div class="pills">
@@ -173,7 +211,8 @@
     <p class="small" style="margin-top:18px;">
       Flights are conducted in compliance with applicable regulations and airspace restrictions.
     </p>
-  </header>
+  </div>
+</header>
 
   <main class="wrap">
 
