@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Aequor Studio — Drone & Fotogrammetria</title>
+  <meta name="description" content="Aequor Studio — riprese drone e fotogrammetria. Lombardia, Piemonte, Veneto, Emilia-Romagna e Svizzera." />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111111;
+      --sub:#6e6e73;
+      --line:#e5e5e7;
+      --card:#f5f5f7;
+      --accent:#0071e3;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:auto;padding:0 24px}
+
+    /* NAV */
+    nav{
+      position:sticky;top:0;
+      background:rgba(255,255,255,.85);
+      backdrop-filter:saturate(180%) blur(12px);
+      border-bottom:1px solid var(--line);
+      z-index:10;
+    }
+    .navinner{
+      display:flex;align-items:center;justify-content:space-between;
+      height:64px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:10px;
+      font-weight:600;letter-spacing:-0.02em;
+      white-space:nowrap;
+    }
+    .brand img{height:28px;width:auto;display:block}
+    .navlinks a{
+      text-decoration:none;color:var(--sub);
+      margin-left:18px;font-size:14px;
+    }
+    .navlinks a:hover{color:var(--text)}
+
+    /* SECTIONS */
+    section{padding:110px 0;border-bottom:1px solid var(--line)}
+    header.hero{padding:130px 0 90px;border-bottom:1px solid var(--line)}
+    h1{
+      font-size:clamp(44px,6vw,78px);
+      font-weight:600;letter-spacing:-0.03em;
+      max-width:920px;
+    }
+    .hero p{
+      margin-top:18px;
+      color:var(--sub);
+      font-size:18px;
+      max-width:760px;
+    }
+
+    /* Pills */
+    .pills{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+    .pill{
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:13px;
+      color:var(--sub);
+      background:#fff;
+    }
+
+    /* Buttons */
+    .cta{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-block;
+      padding:12px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:500;
+      font-size:15px;
+    }
+    .btn.primary{background:var(--accent);color:white}
+    .btn.ghost{border:1px solid var(--line);color:var(--text);background:#fff}
+    .small{font-size:14px;color:var(--sub)}
+
+    /* Grid & cards */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:18px;
+      margin-top:26px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:20px;
+      padding:22px;
+      min-height:120px;
+    }
+    .card h3{font-size:16px;font-weight:600;margin-bottom:8px}
+    .card p{font-size:14px;color:var(--sub)}
+    .card.media{padding:0;overflow:hidden}
+    .card.media img{
+      width:100%;
+      display:block;
+      height:220px;
+      object-fit:cover;
+    }
+    .card.media .inner{padding:18px}
+
+    /* Embed video */
+    .embed{
+      width:100%;
+      height:280px;
+      border:0;
+      display:block;
+    }
+
+    footer{padding:70px 0;text-align:center}
+
+    /* Smooth scroll */
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="wrap navinner">
+      <div class="brand">
+        <img src="assets/Aequor_logo0.png" alt="Aequor Studio logo" />
+        <span>Aequor Studio</span>
+      </div>
+
+      <div class="navlinks">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#processo">Metodo</a>
+        <a href="#contatti">Contatti</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="wrap hero">
+    <h1>Drone & fotogrammetria.<br/>Essenziale. Precisa.</h1>
+    <p>
+      Riprese aeree e rilievi fotogrammetrici per immobili, aziende e territorio.
+      Operativo in Lombardia, Piemonte, Veneto, Emilia-Romagna e Svizzera.
+    </p>
+
+    <div class="pills">
+      <span class="pill">Lombardia</span>
+      <span class="pill">Piemonte</span>
+      <span class="pill">Veneto</span>
+      <span class="pill">Emilia-Romagna</span>
+      <span class="pill">Svizzera</span>
+    </div>
+
+    <div class="cta">
+      <!-- CAMBIA QUI email e WhatsApp -->
+      <a class="btn primary" href="mailto:aequorstudio@gmail.com">Richiedi preventivo</a>
+      <a class="btn ghost" href="#portfolio">Vedi lavori</a>
+    </div>
+
+    <p class="small" style="margin-top:18px;">
+      Operazioni svolte nel rispetto della normativa vigente e delle restrizioni dello spazio aereo.
+    </p>
+  </header>
+
+  <main class="wrap">
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+      <h2 style="font-size:32px;font-weight:600;letter-spacing:-0.02em;">Portfolio</h2>
+      <p class="small">
+        Inserisci qui uno showreel (YouTube/Vimeo) e alcune immagini. Meglio poco ma molto forte.
+      </p>
+
+      <div class="grid">
+        <!-- SHOWREEL: sostituisci ID con il tuo video -->
+        <div class="card">
+          <h3>Showreel</h3>
+          <p style="margin-bottom:12px;">Incolla qui il tuo video (YouTube/Vimeo).</p>
+          <iframe class="embed"
+            src="https://www.youtube.com/embed/ID_DEL_TUO_VIDEO"
+            title="Aequor Studio Showreel"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+
+        <!-- FOTO: metti le tue immagini nella cartella assets/ -->
+        <div class="card media">
+          <img src="assets/immobiliare-01.jpg" alt="Riprese immobiliare" />
+          <div class="inner">
+            <h3>Immobiliare</h3>
+            <p>Foto e clip per annunci e siti.</p>
+          </div>
+        </div>
+
+        <div class="card media">
+          <img src="assets/azienda-01.jpg" alt="Riprese aziendali" />
+          <div class="inner">
+            <h3>Aziende</h3>
+            <p>Contenuti puliti per comunicazione e promo.</p>
+          </div>
+        </div>
+
+        <div class="card media">
+          <img src="assets/rilievo-01.jpg" alt="Fotogrammetria e rilievi" />
+          <div class="inner">
+            <h3>Fotogrammetria</h3>
+            <p>Ortofoto, modelli 3D e documentazione tecnica.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="small" style="margin-top:18px;">
+        Nota: carica le foto in <strong>assets/</strong> e usa nomi file identici (maiuscole incluse).
+      </p>
+    </section>
+
+    <!-- SERVIZI -->
+    <section id="servizi">
+      <h2 style="font-size:32px;font-weight:600;letter-spacing:-0.02em;">Servizi</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Riprese aeree</h3>
+          <p>Video e fotografia drone per immobili, aziende, location ed eventi.</p>
+        </div>
+
+        <div class="card">
+          <h3>Fotogrammetria & rilievi</h3>
+          <p>Modelli 3D, ortofoto e supporto a rilievi tecnici e documentazione.</p>
+        </div>
+
+        <div class="card">
+          <h3>Consegna</h3>
+          <p>Output ottimizzati per web e social, oppure per uso tecnico (su richiesta).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- METODO -->
+    <section id="processo">
+      <h2 style="font-size:32px;font-weight:600;letter-spacing:-0.02em;">Metodo</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>1. Brief</h3>
+          <p>Obiettivo, location, vincoli e output richiesti.</p>
+        </div>
+        <div class="card">
+          <h3>2. Pianificazione</h3>
+          <p>Valutazione area, condizioni e logistica operativa.</p>
+        </div>
+        <div class="card">
+          <h3>3. Acquisizione</h3>
+          <p>Riprese o acquisizione dataset fotogrammetrico.</p>
+        </div>
+        <div class="card">
+          <h3>4. Post</h3>
+          <p>Montaggio / elaborazione e consegna in formati concordati.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section id="contatti" style="border-bottom:none;">
+      <h2 style="font-size:32px;font-weight:600;letter-spacing:-0.02em;">Contatti</h2>
+      <p class="small">
+        Scrivimi: cosa ti serve, dove, quando. Ti rispondo con una proposta chiara.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Email</h3>
+          <p>
+            <a href="mailto:aequorstudio@gmail.com">aequorstudio@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>WhatsApp</h3>
+          <p>
+            <a href="https://wa.me/3336007740?text=Ciao%20Aequor%20Studio%2C%20vorrei%20un%20preventivo%20per%20riprese%20drone%20/%20fotogrammetria.">
+              Scrivimi su WhatsApp
+            </a>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Social</h3>
+          <p>
+            <a href="https://instagram.com/TUOUSERNAME">Instagram</a> ·
+            <a href="https://https://www.youtube.com/@AequorStudio">YouTube</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="wrap">
+    <div style="display:flex;justify-content:center;align-items:center;gap:10px;">
+      <img src="assets/Aequor_logo0.png" alt="Aequor Studio" style="height:22px;width:auto;opacity:.85;">
+      <div>© 2025 Aequor Studio</div>
+    </div>
+  </footer>
+
+</body>
+</html>
